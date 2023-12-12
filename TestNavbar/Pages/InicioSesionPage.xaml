@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestNavbar.Pages.InicioSesionPage"
+             Title="InicioSesionPage">
+
+    <Frame BackgroundColor="#e89e3f"
+           CornerRadius="20"
+           Margin="10">
+        <StackLayout HorizontalOptions="CenterAndExpand"
+                 VerticalOptions="CenterAndExpand"
+                 Spacing="20"
+                 Padding="20">
+
+            <Frame
+                BorderColor="White"
+                CornerRadius="50"
+                HeightRequest="150"
+                WidthRequest="150"
+                IsClippedToBounds="True"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                >
+                <Image Source="burguer_logo.jpg"
+                   Aspect="AspectFill"
+                   HeightRequest="150"
+                   WidthRequest="150"/>
+            </Frame>
+
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="250" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0"
+                       Text="Inicio de Sesión"
+                       Style="{StaticResource titulo}"/>
+
+                <Label Grid.Row="1" Grid.Column="0"
+                       Text="Ingrese sus credenciales:"
+                       Style="{StaticResource parrafo}"/>
+
+                <Entry Grid.Row="2" Grid.Column="0"
+                       x:Name="Username"
+                       Placeholder="Nombre de usuario"
+                       Style="{StaticResource input}"/>
+
+                <Entry Grid.Row="3" Grid.Column="0"
+                       x:Name="Password"
+                       Placeholder="Contraseña"
+                       IsPassword="True"
+                       Style="{StaticResource input}"/>
+
+                <Button Grid.Row="4"
+                        Text="Ingresar"
+                        Clicked="OnClickLogin"
+                        Style="{StaticResource btn}"/>
+
+            </Grid>
+
+           
+        </StackLayout>
+    </Frame>
+
+
+</ContentPage>

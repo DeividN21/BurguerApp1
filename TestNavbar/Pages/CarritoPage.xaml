@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestNavbar.Pages.CarritoPage"
+             Title="CarritoPage">
+
+    <StackLayout>
+
+        <Label Text="Combos"/>
+
+        <ScrollView>
+
+            <ListView
+            x:Name="ListaCombos"
+            RowHeight="120"
+            BackgroundColor="DarkBlue"
+            >
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <ViewCell>
+
+                            <SwipeView>
+
+                                <SwipeView.RightItems>
+                                    <SwipeItems>
+                                        <SwipeItem Text="{Binding PrecioTotal}"
+                                       BackgroundColor="LightGreen"
+                                       />
+                                        <SwipeItem Text="{Binding Cantidad}"
+                                       BackgroundColor="LightPink"
+                                       />
+                                    </SwipeItems>
+                                </SwipeView.RightItems>
+
+                                <Grid Style="{StaticResource estiloMalla}">
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Image Grid.Row="0" Grid.Column="0"
+                                    Source="logo.png"
+                                    HeightRequest="70"
+                                />
+
+                                    <Label Grid.Row="0" Grid.Column="1"
+                                    Style="{StaticResource estiloCuerpo}"
+                                    Text="{Binding Nombre}" 
+                                    FontSize="10"
+                                />
+
+                                </Grid>
+
+                            </SwipeView>
+
+                        </ViewCell>
+
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+        </ScrollView>
+        
+
+        <Label Text="Comidas"/>
+
+        <ScrollView>
+
+            <ListView
+            x:Name="ListaComidas"
+            RowHeight="120"
+            BackgroundColor="DarkBlue"
+            >
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <ViewCell>
+
+                            <SwipeView>
+
+                                <SwipeView.RightItems>
+                                    <SwipeItems>
+                                        <SwipeItem Text="{Binding PrecioTotal}"
+                                       BackgroundColor="LightGreen"
+                                       />
+                                        <SwipeItem Text="{Binding Cantidad}"
+                                       BackgroundColor="LightPink"
+                                       />
+                                    </SwipeItems>
+                                </SwipeView.RightItems>
+
+                                <Grid Style="{StaticResource estiloMalla}">
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Image Grid.Row="0" Grid.Column="0"
+                                    Source="logo.png"
+                                    HeightRequest="70"
+                                />
+
+                                    <Label Grid.Row="0" Grid.Column="1"
+                                    Style="{StaticResource estiloCuerpo}"
+                                    Text="{Binding Nombre}" 
+                                    FontSize="10"
+                                />
+
+                                </Grid>
+
+                            </SwipeView>
+
+                        </ViewCell>
+
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+        </ScrollView>
+
+        <Label Text="Precio Total: "/>
+        <Label x:Name="PrecioTotal"></Label>
+
+        <Button 
+            Text="Comprar"
+            Clicked="onClickComprar"
+            Style="{StaticResource btn}"/>
+        <Button 
+            Text="Cancelar"
+            Clicked="onClickCancelar"
+            Style="{StaticResource btn}"/>
+        <Button 
+            Text="Regresar"
+            Clicked="onClickRegresar"
+            Style="{StaticResource btn}"/>
+
+    </StackLayout>
+
+</ContentPage>

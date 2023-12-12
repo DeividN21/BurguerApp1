@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestNavbar.Layouts.AcercaDe">
+
+    <StackLayout Spacing="8">
+
+        <!-- Sección Sobre Nosotros -->
+        <Frame Style="{StaticResource marco}">
+            <StackLayout
+                Style="{StaticResource fondoPagina}">
+                
+                <Label 
+                    Text="SOBRE NOSOTROS"
+                    Style="{StaticResource titulo}"/>
+                <Label 
+                    Text="En 3D Burguer podrás disfrutar de un menú inspirado en la honestidad y la sencillez gastronómica. Hemos desarrollado una experiencia única para todos nuestros comensales al utilizar ingredientes frescos y sustentables. ¡Sumérgete a un viaje culinario como ningún otro!"
+                    Style="{StaticResource parrafo}"/>
+                <Image 
+                    Source="hamburguesa.jpg"
+                    Style="{StaticResource imagen}"
+                    HeightRequest="160"/>
+
+            </StackLayout>
+        </Frame>
+
+        <!-- Sección Historia -->
+        <Frame Style="{StaticResource marco}">
+            <StackLayout
+                Style="{StaticResource fondoPagina}">
+                
+                <Label 
+                    Text="Un poco de Nuestra Historia"
+                    Style="{StaticResource titulo}"/>
+                <Image 
+                    Source="logo.jpg"
+                    Style="{StaticResource imagen}"/>
+                <Label 
+                    Text="Nuestro restaurante de hamburguesas, ubicado en el centro-norte de Quito, ha sido un destino culinario desde 2007. Con ingredientes frescos y recetas cuidadosamente elaboradas, nuestro espacio acogedor y eficiente invita a todos a disfrutar de sabores auténticos en cada bocado, manteniendo la promesa de rapidez, frescura y satisfacción en cada visita."
+                    Style="{StaticResource parrafo}"/>
+            </StackLayout>
+        </Frame>
+
+        <!-- Sección Misión -->
+        <Frame Style="{StaticResource marco}">
+            <StackLayout
+                Style="{StaticResource fondoPagina}">
+                <Label 
+                    Text="Nuestra Misión"
+                    Style="{StaticResource titulo}"/>
+                <Label 
+                    Text="Crear un ambiente de felicidad y satisfacción, ofreciendo experiencias gastronómicas únicas a través de hamburguesas de alta calidad, fusionando creatividad, sabor y atención excepcional para convertir cada visita en un momento memorable."
+                    Style="{StaticResource parrafo}"/>
+            </StackLayout>
+        </Frame>
+
+        <!-- Sección Visión -->
+        <Frame Style="{StaticResource marco}">
+            <StackLayout Style="{StaticResource fondoPagina}">
+                <Label 
+                    Text="Nuestra Visión"
+                    Style="{StaticResource titulo}"/>
+                <Label 
+                    Text="Ser reconocidos como el lugar preferido por los amantes de las hamburguesas, destacándonos por nuestra dedicación a la excelencia culinaria e innovando constantemente para deleitar a nuestros clientes con opciones deliciosas y sorprendentes."
+                    Style="{StaticResource parrafo}"/>
+            </StackLayout>
+        </Frame>
+
+        <!-- Sección Valores -->
+        <Frame Style="{StaticResource marco}">
+            <StackLayout Style="{StaticResource fondoPagina}">
+                <Label 
+                    Text="Nuestros Valores Principales"
+                    Style="{StaticResource titulo}"/>
+                <Label 
+                    Text="CALIDAD"
+                    Style="{StaticResource parrafo}"/>
+                <Label 
+                    Text="CREATIVIDAD"
+                    Style="{StaticResource parrafo}"/>
+                <Label 
+                    Text="HOSPITALIDAD"
+                    Style="{StaticResource parrafo}"/>
+                <Label 
+                    Text="INNOVACIÓN"
+                    Style="{StaticResource parrafo}"/>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+
+</ContentView>

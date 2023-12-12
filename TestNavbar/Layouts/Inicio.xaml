@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestNavbar.Layouts.Inicio">
+
+    <Frame Style="{StaticResource marco}">
+
+        <StackLayout 
+        Style="{StaticResource fondoPagina}">
+            <Image 
+            Source="hamburguesa.jpg"
+            Aspect="AspectFill"
+            HeightRequest="300"/>
+
+            <Label 
+            Text="¡Ven y disfruta con nosotros!"
+            Style="{StaticResource titulo}"/>
+            <Label 
+            Text="El vasto menú de 2D Burguer está inspirado en los viajes y en el amor por diferentes culturas. Nuestras delicias culinarias contienen ingredientes frescos para que llevarte sabor y calidad a la mesa."
+            Style="{StaticResource parrafo}"/>
+
+        </StackLayout>
+
+    </Frame>
+
+
+</ContentView>

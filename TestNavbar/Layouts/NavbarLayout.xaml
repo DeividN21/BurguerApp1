@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BurguerApp.Layouts.NavbarLayout">
+
+    <Frame Style="{StaticResource marco}">
+
+        <StackLayout 
+            Style="{StaticResource fondoPagina}">
+            <!-- Encabezado -->
+            <StackLayout>
+                <Grid RowSpacing="8">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="80"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Frame
+                        Grid.Row="0" Grid.ColumnSpan="3"
+                        BorderColor="White"
+                        CornerRadius="50"
+                        HeightRequest="110"
+                        WidthRequest="110"
+                        IsClippedToBounds="True"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center">
+
+                        <Image Source="burguer_logo.jpg"
+                           Aspect="AspectFill"
+                           HeightRequest="110"
+                           WidthRequest="110"/>
+
+                    </Frame>
+
+                    <!-- Nombre del Usuario -->
+                    <StackLayout 
+                        Grid.Row="1" Grid.ColumnSpan="3">
+                        <Label 
+                            x:Name="Username"
+                            Text="Cliente"
+                            Style="{StaticResource parrafo}"/>
+                    </StackLayout>
+
+                    <ScrollView
+                        Grid.Row="2" Grid.ColumnSpan="3"
+                        Orientation="Horizontal">
+                        <HorizontalStackLayout
+                            Style="{StaticResource nav}">
+
+
+                            <Button
+                                Text="Cerrar sesión"
+                                Clicked="OnClickCerrarSesion"
+                                Style="{StaticResource btn}"/>
+                            
+                            <Button
+                                Text="Ordenes"
+                                Clicked="OnClickOrdenes"
+                                Style="{StaticResource btn}"/>
+                            
+
+                            <Button
+                                Text="Carrito"
+                                Clicked="OnClickCarrito"
+                                Style="{StaticResource btn}"/>
+                        </HorizontalStackLayout>
+                    </ScrollView>
+
+                    <!-- Menu de Opciones -->
+                    <ScrollView 
+                    Grid.Row="3" Grid.ColumnSpan="3"
+                    Orientation="Horizontal">
+                        <HorizontalStackLayout
+                        Style="{StaticResource nav}">
+                            <!--Inicio-->
+                            <Button 
+                                Text="Inicio"
+                                Clicked="OnClickInicio"
+                                Style="{StaticResource btn}"/>
+                            <Button 
+                                Text="Acerca de"
+                                Clicked="OnClickAcerca"
+                                Style="{StaticResource btn}"/>
+                            <Button 
+                                Text="Menu"
+                                Clicked="OnClickMenu"
+                                Style="{StaticResource btn}"/>
+                        </HorizontalStackLayout>
+                    </ScrollView>
+
+                </Grid>
+
+            </StackLayout>
+
+        </StackLayout>
+
+    </Frame>
+
+</ContentView>

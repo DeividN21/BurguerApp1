@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestNavbar.Pages.DetallesComboPage"
+             Title="DetallesComboPage">
+
+
+    <ScrollView>
+
+        <VerticalStackLayout
+        BackgroundColor="#081a1e"
+        Padding="8"
+        >
+
+            <Label
+                Text="Detalles del Producto"
+                Style="{StaticResource titulo}"
+            />
+
+            <Grid
+                Padding="16"
+                BackgroundColor="#44545c">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Row="0" Grid.ColumnSpan="2"
+                    Source="logo.jpg"
+                    HeightRequest="300"
+                    HorizontalOptions="Center" 
+                />
+
+                <Label Grid.Row="1" Grid.ColumnSpan="2"
+                    Style="{StaticResource titulo}"
+                    TextColor="#f5f5e1"
+                    x:Name="titulo"
+                />
+
+                <Label Grid.Row="2" Grid.ColumnSpan="2"
+                    Style="{StaticResource titulo}"
+                    Text="Descripción:"
+                    FontSize="16"
+                    TextColor="#f5f5e1"
+                    HorizontalOptions="Start"
+                />
+
+                <Label Grid.Row="3" Grid.ColumnSpan="2"
+                    Style="{StaticResource parrafo}"
+                    FontSize="16"
+                    x:Name="descripcion"
+                    HorizontalTextAlignment="Start"
+                />
+
+                <Label Grid.Row="4" Grid.Column="0"
+                    Style="{StaticResource titulo}"
+                    Text="Descuento:"
+                    FontSize="16"
+                    TextColor="#f5f5e1"
+                    HorizontalOptions="Start"
+                />
+
+                <Label Grid.Row="4" Grid.Column="1"
+                    Style="{StaticResource parrafo}"
+                    x:Name="descuento"
+                    FontSize="16"
+                    TextColor="#f5f5e1"
+                    HorizontalOptions="Start"
+                />
+
+                <Label Grid.Row="5" Grid.Column="0"
+                    Style="{StaticResource titulo}"
+                    FontSize="16"
+                    Text="Cantidad:"
+                    TextColor="#f5f5e1"
+                    HorizontalOptions="Start"
+                />
+                
+                <Entry
+                    Grid.Row="5" Grid.Column="1"
+                    HeightRequest="50"
+                    x:Name="cantidad"
+                    TextColor="#f5f5e1"
+                    Placeholder="0"
+                    BackgroundColor="#44545c">
+                </Entry>
+
+            </Grid>
+
+
+            <ListView
+            x:Name="ListaProductos"
+            RowHeight="86"
+            BackgroundColor="#f5f5e1">
+                <ListView.ItemTemplate>
+
+                    <DataTemplate>
+
+                        <ViewCell>
+
+                            <SwipeView>
+
+                                <Grid Padding="16">
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="22" />
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Image 
+                                        Grid.RowSpan="3" Grid.Column="0"
+                                        Source="logo.png"
+                                        HeightRequest="70"
+                                        />
+
+                                    <Label 
+                                        Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"
+                                        Style="{StaticResource estiloTitulo2}"
+                                        Text="{Binding Nombre}" 
+                                        TextColor="Black"
+                                        FontSize="15"
+                                        />
+
+                                    <Label 
+                                        Grid.Row="1" Grid.Column="1"
+                                        Style="{StaticResource estiloTitulo2}"
+                                        Text="Precio:" 
+                                        TextColor="Black"
+                                        FontSize="15"
+                                        />
+
+                                    <Label 
+                                        Grid.Row="1" Grid.Column="2"
+                                        Style="{StaticResource estiloTitulo2}"
+                                        Text="{Binding Precio}" 
+                                        TextColor="Black"
+                                        FontSize="15"
+                                        />
+
+                                    <Label 
+                                        Grid.Row="2" Grid.Column="1"
+                                        Style="{StaticResource estiloTitulo2}"
+                                        Text="Cantidad:" 
+                                        TextColor="Black"
+                                        FontSize="15"
+                                        />
+                                    
+                                    <Label 
+                                        Grid.Row="2" Grid.Column="2"
+                                        Style="{StaticResource estiloTitulo2}"
+                                        Text="{Binding Cantidad}" 
+                                        TextColor="Black"
+                                        FontSize="15"
+                                        />
+
+                                </Grid>
+
+                            </SwipeView>
+
+                        </ViewCell>
+
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+
+
+
+            <Grid Style="{StaticResource estiloMalla}">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Row="1" Grid.Column="1"
+                    Style="{StaticResource btn}"
+                    Text="Agregar"
+                    Clicked="onClicAniadir"
+                />
+
+                <Button Grid.Row="1" Grid.Column="0"
+                    Style="{StaticResource btn}"
+                                        BackgroundColor="#f5f5e1"
+                    Text="Volver"
+                    TextColor="#7c8c94"
+                    Clicked="onClicVolver"
+                />
+
+            </Grid>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+
+
+</ContentPage>

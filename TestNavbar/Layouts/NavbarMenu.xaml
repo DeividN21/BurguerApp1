@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TestNavbar.Layouts.NavbarMenu">
+
+    <HorizontalStackLayout Style="{StaticResource nav}">
+        <Button
+            Text="Combos"
+            Clicked="onClickCombos"
+            FontSize="16"
+            BackgroundColor="#5b7449"
+            Style="{StaticResource btn}"
+            />
+        <Button
+            Text="Comidas"
+            Clicked="onClickComidas"
+            FontSize="16"
+            BackgroundColor="#5b7449"
+            Style="{StaticResource btn}"
+            />
+    </HorizontalStackLayout>
+
+
+</ContentView>
