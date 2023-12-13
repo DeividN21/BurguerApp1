@@ -6,7 +6,14 @@ namespace TestNavbar
         public App()
         {
             InitializeComponent();
-            MainPage = new InicioSesionPage();
+            if (Preferences.Get("IsUserLoggedIn", false))
+            {
+                MainPage = new MainPage();
+            }
+            else
+            {
+                MainPage = new InicioSesionPage();
+            }
         }
     }
 }

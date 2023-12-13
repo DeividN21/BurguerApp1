@@ -64,7 +64,7 @@ namespace TestNavbar
 
         private void NavbarLayout_CerrarSesionButtonPressed(object sender, EventArgs e)
         {
-            Navigation.PopModalAsync();
+            Navigation.PushModalAsync(new InicioSesionPage());
         }
 
         private void NavbarLayout_OrdenesButtonPressed(object sender, EventArgs e)

@@ -26,6 +26,8 @@ public partial class InicioSesionPage : ContentPage
             _sesion.IdCliente = cliente.Id;
             Username.Text = "";
             Password.Text = "";
+
+            Preferences.Set("IsUserLoggedIn", true);
             await Navigation.PushModalAsync(new MainPage());
         }
         else
