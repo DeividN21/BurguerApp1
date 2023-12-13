@@ -33,4 +33,9 @@ public partial class InicioSesionPage : ContentPage
             await DisplayAlert("Error", "Inicio de sesión fallido. Por favor verifica tus credenciales.", "OK");
         }
     }
+
+    private void OnRegisterLinkTapped(object sender, EventArgs e)
+    {
+        Navigation.PushModalAsync(new RegistroPage());
+    }
 }

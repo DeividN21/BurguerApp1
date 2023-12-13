@@ -35,6 +35,7 @@
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="250" />
@@ -59,7 +60,18 @@
                        IsPassword="True"
                        Style="{StaticResource input}"/>
 
-                <Button Grid.Row="4"
+                <Label Grid.Row="4" Grid.Column="0"
+                       Text="¿Usuario nuevo? Regístrese"
+                       TextColor="Blue"
+                       Margin="0,5,0,10"
+                       TextDecorations="Underline"
+                       HorizontalTextAlignment="Center">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnRegisterLinkTapped" />
+                        </Label.GestureRecognizers>
+                </Label>
+
+                <Button Grid.Row="5"
                         Text="Ingresar"
                         Clicked="OnClickLogin"
                         Style="{StaticResource btn}"/>
